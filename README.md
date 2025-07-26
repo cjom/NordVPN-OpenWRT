@@ -57,6 +57,9 @@ For now the script can't select servers by country/city. It just gets 10 servers
 
      + Edit the script `/opt/nordvpn_watchdog.sh` and paste this "basic" token inside the quotes in `NORDVPN_BASIC_TOKEN=''` (including the two ending equal characters).
 
+<p align="center" /><img width="1328" height="740" alt="token" src="https://github.com/user-attachments/assets/a305dc55-0a17-43da-a016-467b1a3a1269" /></p>
+
+
 5. Make the script run when the router boots, with the command: `echo "/opt/nordvpn_watchdog.sh &" >>/etc/rc.local`
 
    - Some routers have `exit 0` in the end of the file `/etc/rc.local`. Make sure that `/opt/nordvpn_watchdog.sh &` is before that, or just delete the `exit 0` line.
