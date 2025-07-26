@@ -18,6 +18,11 @@ For now the script can't select servers by country/city. It just gets 10 servers
 
 - **BACKUP YOUR CURRENT CONFIGURATION!** Use a browser to log in to your router -> "System" -> "Backup / Flash Firmware" and click on "Generate archive". Mistakes happen but can easily be fixed just restoring a backup.
 
+- Make sure your router has the needed packages to connect to a VPN using wireguard. Log in to the router with a browser -> "System" -> "Software": click in "Update lists..."; wait for the update to finish; write `wireguard` in the "Filter:" box; click the button "Install" on the right of the listed packages.
+
+<img width="1194" height="708" alt="wireguard" src="https://github.com/user-attachments/assets/b5d9e128-9163-47d5-8500-c4b9236982a8" />
+
+
 - You need to know how to log in to the router using SSH. You can use [putty](https://www.putty.org) or use ssh command from Linux or Windows Subsystem for Linux.
 
 - You need to edit the script, so you need to know how to use `vi`, or maybe `nano`. Another way would be to edit the script in your PC but then you need to know how to upload it to the router (using scp, for example) and how to avoid the CR/LF problem when editing text files on Windows (using Notepad++, for example).
@@ -26,7 +31,7 @@ For now the script can't select servers by country/city. It just gets 10 servers
 
   + If some command is missing, try to install them by logging in to the router with a browser -> "System" -> "Software": click in "Update lists..."; wait for the update to finish; write the command name in the "Filter:" box; click the button "Install" on the right of the listed package.
  
-  + Keep in mind that if you upgrade de firmware, you need to reinstall the packages for this commands (there are ways to upgrade and keep the extra packages, or download firmwares with the desired packages included).
+  + Keep in mind that if you upgrade the firmware, you need to reinstall the packages (there are ways to get firmware with the desired packages included, for example: https://firmware-selector.openwrt.org -> select your router -> click on "Customize installed packages and/or first boot script").
 
 - And finally, go to https://my.nordaccount.com/dashboard/nordvpn/access-tokens/ -> "Generate new token" and get a new one. Should be a string with 64 random numbers and letters.
 
@@ -59,6 +64,9 @@ For now the script can't select servers by country/city. It just gets 10 servers
    - This can also be done by logging in to the router with some browser -> "System" -> "Startup" -> "Local Startup" tab, and paste there the command `/opt/nordvpn_watchdog.sh &`.
 
 6. And finally, before rebooting, you might want to run the script from the SSH terminal with the command `/opt/nordvpn_watchdog.sh &` and check the output in the "System Log" of the menu "Status" (in the browser, after you log in to the router). All script messages start with '***' so it's easy to use the filter in the top of the page.
+
+<img width="550" height="277" alt="normal_boot" src="https://github.com/user-attachments/assets/a8c517c5-9b8c-48be-a508-14c614dcaef7" />
+
 
 ###
 
