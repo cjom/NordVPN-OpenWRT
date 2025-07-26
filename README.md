@@ -20,7 +20,7 @@ For now the script can't select servers by country/city. It just gets 10 servers
 
 - Make sure your router has the needed packages to connect to a VPN using wireguard. Log in to the router with a browser -> "System" -> "Software": click in "Update lists..."; wait for the update to finish; write `wireguard` in the "Filter:" box; click the button "Install" on the right of the listed packages.
 
-<img width="1194" height="708" alt="wireguard" src="https://github.com/user-attachments/assets/b5d9e128-9163-47d5-8500-c4b9236982a8" />
+<p align="center" /><img width="1194" height="708" alt="wireguard" src="https://github.com/user-attachments/assets/b5d9e128-9163-47d5-8500-c4b9236982a8" /></p>
 
 
 - You need to know how to log in to the router using SSH. You can use [putty](https://www.putty.org) or use ssh command from Linux or Windows Subsystem for Linux.
@@ -65,7 +65,7 @@ For now the script can't select servers by country/city. It just gets 10 servers
 
 6. And finally, before rebooting, you might want to run the script from the SSH terminal with the command `/opt/nordvpn_watchdog.sh &` and check the output in the "System Log" of the menu "Status" (in the browser, after you log in to the router). All script messages start with '***' so it's easy to use the filter in the top of the page.
 
-<img width="550" height="277" alt="normal_boot" src="https://github.com/user-attachments/assets/a8c517c5-9b8c-48be-a508-14c614dcaef7" />
+<p align="center" /><img width="550" height="277" alt="normal_boot" src="https://github.com/user-attachments/assets/a8c517c5-9b8c-48be-a508-14c614dcaef7" /></p>
 
 
 ###
